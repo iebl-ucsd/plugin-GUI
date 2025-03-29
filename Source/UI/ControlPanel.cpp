@@ -553,6 +553,8 @@ void ControlPanel::startAcquisition(bool recordingShouldAlsoStart)
                 recordOptionsButton->setEnabled(false);
             }
 
+            backgroundColour = Colour(0, 255, 0);
+            repaint();
             graph->startAcquisition(); // start data flow
         }
     }
@@ -564,7 +566,8 @@ void ControlPanel::stopAcquisition()
     {
         stopRecording();
     }
-
+    backgroundColour = Colour(51, 51, 51);
+    repaint();
     graph->stopAcquisition();
 
     audio->endCallbacks();
