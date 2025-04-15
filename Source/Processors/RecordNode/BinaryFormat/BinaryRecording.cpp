@@ -138,7 +138,7 @@ void BinaryRecording::openFiles(File rootFolder, int experimentNumber, int recor
         streamIndex++;
 
         String datPath = getProcessorString(ch);
-        String filename = contPath + datPath + "continuous.dat";
+        String filename = contPath + datPath + "continuous_test.dat";
 
         LOGD("Creating file: ", contPath, datPath, "sample_numbers.npy");
         ScopedPointer<NpyFile> tFile = new NpyFile(contPath + datPath + "sample_numbers.npy", NpyType(BaseType::INT64,1));
